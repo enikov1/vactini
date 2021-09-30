@@ -114,8 +114,9 @@ body {
   font-size: 0.875rem;
   overflow-x: hidden;
   min-width: 320px;
-  background: url(../img/bg.jpg) no-repeat center center;
+  background: url(../img/bg.jpg) no-repeat top center;
   background-size: cover;
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
