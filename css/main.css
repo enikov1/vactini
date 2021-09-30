@@ -129,16 +129,56 @@ body {
   min-height: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1050px) {
   body {
-    background: url(../img/bg_smart.png) no-repeat center center;
-    background-size: cover;
+    background: none;
+  }
+}
+
+body::after, body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+body::before {
+  left: 0;
+  background: url(../img/foot_bg_left.png) no-repeat;
+  width: 38.4375rem;
+  height: 20.875rem;
+}
+
+@media (max-width: 1050px) {
+  body::before {
+    background: url(../img/foot_bg_left_smart.png) no-repeat;
+    width: 16.875rem;
+    height: 22.5rem;
+    bottom: -4.5rem;
+  }
+}
+
+body::after {
+  right: 0;
+  background: url(../img/foot_bg_right.png) no-repeat;
+  width: 38.625rem;
+  height: 25.9375rem;
+}
+
+@media (max-width: 1050px) {
+  body::after {
+    background: url(../img/foot_bg_right_smart.png) no-repeat;
+    width: 5.625rem;
+    height: 29.5rem;
+    bottom: 1.875rem;
   }
 }
 
 .container {
-  max-width: 1084px;
+  position: relative;
+  max-width: 1082px;
   margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 
 .relative {
@@ -273,6 +313,8 @@ body {
 }
 
 .main {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,6 +325,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 4.625rem;
+  height: 100%;
 }
 
 @media (max-width: 540px) {
@@ -294,8 +337,6 @@ body {
 .main__top {
   margin-top: 2rem;
   margin-bottom: 3.3125rem;
-  margin-left: 2rem;
-  margin-right: 2.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -354,6 +395,8 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 @media (max-width: 1050px) {
@@ -365,7 +408,8 @@ body {
 }
 
 .main__center .left {
-  margin-left: 5rem;
+  margin-left: 2.375rem;
+  margin-top: 1.125rem;
 }
 
 @media (max-width: 1050px) {
@@ -563,7 +607,7 @@ body {
 }
 
 .main__center .right {
-  margin-right: 3.25rem;
+  margin-right: 1.5rem;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 23.0625rem;
       -ms-flex: 0 0 23.0625rem;
@@ -850,6 +894,8 @@ body {
 }
 
 .main__foot {
+  position: relative;
+  z-index: 2;
   margin-top: auto;
   width: 100%;
   background-color: #F0F0F0;
